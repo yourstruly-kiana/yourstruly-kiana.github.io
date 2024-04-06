@@ -89,30 +89,29 @@ input[type="submit"]:focus {
       <input type="password" id="password" name="password" required>
   
       <br>
- 	 <button onclick="validateAndRedirect()">Login</button>
+ 	  <button type="submit">Login</button>
         
   </form>
 
 	<script>
-    // JavaScript function to validate email and password fields and redirect if valid
-    function validateAndRedirect() {
+    // JavaScript to handle form submission
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
         // Get email and password values
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
 
         // Check if both email and password fields are filled
-        if (email && password) {
-            // Redirect to home.html if both fields are filled
-		alert('it worked');
-            window.location.href = 'home.html';
-        } else {
+        if (!email || !password) {
+            // Prevent form submission if any of the fields are empty
+            event.preventDefault();
             // Display an alert if any of the fields are empty
             alert('Please enter both email and password.');
+        } else {
+            // Redirect to home.html if both fields are filled
+            window.location.href = 'home.html';
         }
-    }
+    });
 </script>
-
-	
 	
 </body>
 </html>
