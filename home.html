@@ -11,19 +11,27 @@
             margin-bottom: 40px; /* Add margin between headings */
         }  
       body {
+      		display: flex;
+       		font-family: 'Montserrat', sans-serif; /* Use Roboto font */
             text-align: center;
+      		display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
             background-color: #0d0d0d; /* Background color */
             color: #ffffff; /* Font color */
         }
         .background-image {
-            background-image: url('https://i.pinimg.com/736x/da/ae/4f/daae4fc27943765338310774569fb05c.jpg'); /* Sample image URL */
+            background-image: url('https://i.pinimg.com/736x/da/ae/4f/daae4fc27943765338310774569fb05c.jpg');
             background-size: cover; /* Cover the entire element with the background image */
             width: 500px; /* Adjust width as needed */
             height: 400px; /* Adjust height as needed */
             //display: flex; /* Optional: Center content vertically */
-           //justify-content: center; /* Optional: Center content horizontally */
-            //align-items: center; /* Optional: Center content vertically */
-      		
+            justify-content: center; /* Optional: Center content horizontally */
+            align-items: center; /* Optional: Center content vertically */
+      		box-sizing: border-box; 
+      		padding: 20px; /* Add padding */
+      		box-sizing: border-box; /* Include padding in element's total width/height */
+            text-align: center; 
         }
     </style>
 </head>
